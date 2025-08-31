@@ -5,6 +5,12 @@ class Employee {
     emp_dept: string;
     emp_salary: number;
 
+    setEmployeeData(emp_id: number, emp_name: string, emp_dept: string, emp_salary: number): void {
+        this.emp_id = emp_id;
+        this.emp_name = emp_name;
+        this.emp_dept = emp_dept;
+        this.emp_salary = emp_salary;
+    }
 
     printEmployeeDetails(): void {
         console.log("Employee Id: " + this.emp_id);
@@ -31,3 +37,9 @@ emp_sadat.emp_dept = "QA";
 emp_sadat.emp_salary = 500;
 
 emp_sadat.printEmployeeDetails();
+
+
+var emp_rishad = new Employee();
+
+emp_rishad.setEmployeeData(102, "Rishad", "SQA", 4000);
+emp_rishad.printEmployeeDetails();
